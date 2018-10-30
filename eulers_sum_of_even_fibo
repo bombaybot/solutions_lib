@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+   unsigned long  n1=0,n2=1,fibo=0,sum=0,n,T;
+
+    //logicl
+    cin>>n;
+    for(unsigned long i=0;i<n;i++){
+    fibo=n1+n2;
+     n1=n2;
+     n2=fibo; //calculating fibo
+
+    if(fibo%2==0){sum=sum+fibo;}
+    }
+    }
+
+cout<<sum<<endl; //end of logic
+
+//end of test cases loop
+
+    return 0;
+}
