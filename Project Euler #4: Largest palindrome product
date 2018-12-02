@@ -1,0 +1,54 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int main()
+{
+
+vector<int> v;
+vector<int> vo;
+
+vector<int> v2;
+for(int i=999;i>=100;i--){
+   for(int j=999;j>=100;j--){
+        v.push_back(i*j);
+
+}
+}
+
+    for (auto x : v)                                        //Iterates through all values Prints all values in the array
+{
+    string str,og;
+    og=to_string(x);
+    str=to_string(x);
+    reverse(str.begin(), str.end());
+    int tti=stoi(str);
+    if(str==og){
+        v2.push_back(tti);
+
+
+    }
+
+}
+
+ 
+int T,N1,N2;
+cin>>T;
+         while(T!=0){ 
+             vo.clear();
+
+            cin>>N1;
+     for (auto x : v2)  {
+         if(x<N1)
+         vo.push_back(x);
+      
+     }
+     std::sort (vo.begin(), vo.end());
+  std::reverse(vo.begin(), vo.end()) ;
+ cout<<*max_element(vo.begin(),vo.end())<<endl;
+T--;
+      }
+
+
+ return 0;
+}
